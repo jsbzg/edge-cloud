@@ -12,6 +12,10 @@
     <modules>
         <module>common</module>
         <module>gateway</module>
+        <module>service-one</module>
+        <module>service-two</module>
+        <module>service-one/service-one-core</module>
+        <module>service-one/service-one-api</module>
     </modules>
 
     <properties>
