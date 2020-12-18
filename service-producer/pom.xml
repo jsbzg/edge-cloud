@@ -9,11 +9,11 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>service-two</artifactId>
+    <artifactId>service-producer</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>service-two-core</module>
-        <module>service-two-api</module>
+        <module>service-producer-core</module>
+        <module>service-producer-api</module>
     </modules>
 
     <properties>

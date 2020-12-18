@@ -12,10 +12,8 @@
     <modules>
         <module>common</module>
         <module>gateway</module>
-        <module>service-one</module>
-        <module>service-two</module>
-        <module>service-one/service-one-core</module>
-        <module>service-one/service-one-api</module>
+        <module>service-consumer</module>
+        <module>service-producer</module>
         <module>auth</module>
         <module>monitor</module>
         <module>sys-admin</module>
