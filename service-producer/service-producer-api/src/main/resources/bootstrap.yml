@@ -1,0 +1,29 @@
+server:
+  port: 8019
+spring:
+  # 服务名称
+  application:
+    name: producer-server
+  main:
+    allow-bean-definition-overriding: true #当遇到同样名字的时候，是否允许覆盖注册
+  cloud:
+    nacos:
+      discovery:
+        server-addr: www.ykermall.com:8848
+        namespace: 96a01731-5d23-43ac-9d30-65c556ab57c7
+        group: DEV_YML_GROUP
+      # 配置中心
+      config:
+        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+        namespace: ${spring.cloud.nacos.discovery.namespace}
+        group: ${spring.cloud.nacos.discovery.group}
+        # 设置配置文件yml 格式
+        file-extension: yml
+        # 公共配置文件共享
+        extension-configs:
+          - data-id:  application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+            group: ${spring.cloud.nacos.discovery.group}
+            refresh: true
+  # 项目开发模式
+  profiles:
+    active: dev
